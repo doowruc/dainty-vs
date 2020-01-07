@@ -10,10 +10,10 @@ const { toColorHex } = require("../conversions");
 
 const readFile = util.promisify(fs.readFile);
 
-async function transformCoveragePage(colors) {
+async function transformCoveragePage(configuration) {
   const source = path.join(__dirname, "../sources/coverage.html");
   const darkThemeSource = path.join(__dirname, "../sources/dark.vstheme");
-  const daintyThemeSource = path.join(__dirname, "../../dist/dainty.vstheme");
+  const daintyThemeSource = path.join(__dirname, "../../dist/" + configuration.name + ".vstheme");
 
   logTransform(source);
 

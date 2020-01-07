@@ -41,7 +41,7 @@ async function transformTheme(configuration) {
   );
 
   replacedContent = applyReplacements(replacedContent, [
-    ["ThemeName", "Dainty"],
+    ["ThemeName", configuration.name],
     ["ThemeGUID", uuidv1()]
   ]);
 

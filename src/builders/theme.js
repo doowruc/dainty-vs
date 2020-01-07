@@ -7,8 +7,8 @@ const {
 } = require("dainty-shared/src/utils");
 
 async function buildThemeFiles(dirname, configuration) {
-  const vsthemeTarget = path.join(dirname, "../dist/dainty.vstheme");
-  const vssettingsTarget = path.join(dirname, "../dist/dainty.vssettings");
+  const vsthemeTarget = path.join(dirname, "../dist/" + configuration.name + ".vstheme");
+  const vssettingsTarget = path.join(dirname, "../dist/" + configuration.name + ".vssettings");
 
   await createDistDirectory(dirname);
 
